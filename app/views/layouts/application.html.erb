@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">	
   <title>Bhramanvedh</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<div class="container">
+	<h1><a href="”#”">Coming soon ...</a></h1>
+	<div class="container">
+	    <div class="navbar">
+	              <div class="navbar-inner">	              
+	                  <ul class="nav">
+	                    <li class="active"><a href="#">Home</a></li>
+	                    <li><a href="#">Agricultural Tours</a></li>
+	                    <li><a href="#">Educational Tours</a></li>
+	                    <li><a href="#">Domestic Tours</a></li>
+	                    <li><a href="#">About Us</a></li>
+	                    <li><a href="#">Contact</a></li>
+	                  </ul>	             
+	              </div>
+	     </div>
+	</div>		
 <%= yield %>
-
+</div>
 </body>
 </html>

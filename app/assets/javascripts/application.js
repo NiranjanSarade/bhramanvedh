@@ -15,3 +15,24 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap
+
+/*$(function() {
+ $('ul.nav li a').click(function (e) {
+    //e.preventDefault();
+    $('ul.nav li').removeClass('active');
+    $(this).addClass('active'); 
+           
+  });
+});*/
+
+$(function() {
+	$('ul.nav li a').click(function(e) {
+            e.preventDefault();
+	        $('ul.nav li').removeClass('active');
+
+	        var $parent = $(this).parent();
+	        if (!$parent.hasClass('active')) {
+	            $parent.addClass('active');
+	        }
+  });	        	
+});

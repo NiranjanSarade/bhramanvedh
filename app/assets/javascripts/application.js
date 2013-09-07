@@ -13,26 +13,19 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
 //= require bootstrap
+//= require_tree .
 
-/*$(function() {
- $('ul.nav li a').click(function (e) {
-    //e.preventDefault();
-    $('ul.nav li').removeClass('active');
-    $(this).addClass('active'); 
-           
-  });
-});*/
 
 $(function() {
 	$('ul.nav li a').click(function(e) {
-            e.preventDefault();
-	        $('ul.nav li').removeClass('active');
+       e.preventDefault();
+       $('ul.nav li').removeClass('active');
 
-	        var $parent = $(this).parent();
-	        if (!$parent.hasClass('active')) {
-	            $parent.addClass('active');
-	        }
+	   var $parent = $(this).parent();
+       if (!$parent.hasClass('active')) {
+	      $parent.addClass('active');
+	   }
+	   window.location = this.href;
   });	        	
 });

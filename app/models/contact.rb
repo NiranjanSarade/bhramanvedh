@@ -25,7 +25,13 @@ class Contact
    
    def deliver
      return false unless valid?
-     true
+     Pony.mail({
+           :from => %("#{name}" <#{email}>),
+           :reply_to => email,
+           :subject => "Tour inquiry from bhramanveh -> contact",
+           :body => message,
+           :html_body => simple_format(message)
+         })
    end 
    
  end

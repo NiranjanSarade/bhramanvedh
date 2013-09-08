@@ -1,5 +1,6 @@
 class Contact
    extend ActiveModel::Naming
+   include ActionView::Helpers::TextHelper
    include ActiveModel::Conversion
    include ActiveModel::Validations
    

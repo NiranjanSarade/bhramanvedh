@@ -15,9 +15,43 @@
 	              <div class="navbar-inner">	              
 	                  <ul class="nav">
 	                    <li class="<%= 'active' if current_page?(root_path) %>"><%= link_to "Home", root_path%></li>
-	                    <li><a href="#">Agricultural Tours</a></li>
-	                    <li><a href="#">Educational Tours</a></li>
-	                    <li><a href="#">Domestic Tours</a></li>
+	                    <li class="dropdown">
+						    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						        <i class="icon-th-large"></i> Adventure Tours
+						        <b class="caret"></b>
+						    </a>
+						    <ul class="dropdown-menu">
+						        <li><a href="#">River Rafting</a></li>
+						        <li><a href="#">Camping</a></li>
+						        <li><a href="#">Wild Life Safaris</a></li>
+						    </ul>
+						</li>
+	                    
+						<li class="dropdown">
+						    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						        <i class="icon-th-large"></i> Special Tours
+						        <b class="caret"></b>
+						    </a>
+						    <ul class="dropdown-menu">
+						        <li><a href="#">Women's Special</a></li>
+						        <li><a href="#">Senior Citizen's Special</a></li>
+						        <li><a href="#">Students Special</a></li>
+						        <li><a href="#">Family Special</a></li>
+						    </ul>
+						</li>	
+						<li class="dropdown">
+						    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						        <i class="icon-th-large"></i> Other Tours
+						        <b class="caret"></b>
+						    </a>
+						    <ul class="dropdown-menu">
+						        <li><a href="#">Heritage & Cultural</a></li>
+						        <li><a href="#">Pilgrims</a></li>
+						        <li><a href="#">Social</a></li>
+						        <li><a href="#">Science & Industry </a></li>
+						        <li><a href="#">Agricultural</a></li>
+						    </ul>
+						</li>
 						<li><a href="http://www.bhramanvedh.blogspot.com" target="_blank">Blog</a></li>
 						<li class="<%= 'active' if current_page?(gallery_path) %>"><%= link_to "Gallery", gallery_path%></li>
 	                    <li class="<%= 'active' if current_page?(about_path) %>"><%= link_to "About Us", about_path%></li>

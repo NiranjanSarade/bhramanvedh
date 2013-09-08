@@ -26,12 +26,13 @@ class Contact
    
    def deliver
      return false unless valid?
+     msg = "#{message} \n Contact :- #{contact_no}"
      Pony.mail({
            :from => %("#{name}" <#{email}>),
            :reply_to => email,
            :subject => "Tour enquiry from Bhramanvedh.com -> contact",
-           :body => message,
-           :html_body => simple_format(message)
+           :body => msg,
+           :html_body => simple_format(msg)
          })
    end 
    

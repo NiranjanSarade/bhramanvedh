@@ -16,7 +16,7 @@ class Contact
      @name  = attributes[:name]
      @email = attributes[:email]
      @contact_no = attributes[:contact_no]
-     @enquiry = attributes[:message]
+     @message = attributes[:message]
    end
    
    def persisted?

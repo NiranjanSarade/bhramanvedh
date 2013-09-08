@@ -7,6 +7,7 @@ Bhramanvedh::Application.routes.draw do
    
    get 'about' => 'static#about'
    get 'terms' => 'static#terms'
+   get 'gallery' => 'static#gallery'
    
    resources :contacts, :only => [:new, :create] 
   

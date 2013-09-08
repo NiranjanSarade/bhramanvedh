@@ -3,6 +3,9 @@ class StaticController < ApplicationController
   end
   
   def terms
-  end  
+  end 
+  
+  def gallery
+  end   
 
 end

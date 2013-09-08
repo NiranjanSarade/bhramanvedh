@@ -27,5 +27,8 @@ $(function() {
 	      $parent.addClass('active');
 	   }
 	   window.location = this.href;
-  });	        	
+  });
+	        	
 });
+
+

@@ -6,6 +6,7 @@ Bhramanvedh::Application.routes.draw do
    root 'home#index'
    
    get 'about' => 'static#about'
+   get 'terms' => 'static#terms'
    
    resources :contacts, :only => [:new, :create] 
   

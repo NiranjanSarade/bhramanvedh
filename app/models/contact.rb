@@ -29,7 +29,7 @@ class Contact
      Pony.mail({
            :from => %("#{name}" <#{email}>),
            :reply_to => email,
-           :subject => "Tour inquiry from bhramanveh -> contact",
+           :subject => "Tour enquiry from Bhramanvedh.com -> contact",
            :body => message,
            :html_body => simple_format(message)
          })

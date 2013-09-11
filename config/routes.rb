@@ -1,4 +1,6 @@
 Bhramanvedh::Application.routes.draw do
+  resources :itineraries
+
   resources :tours
 
   resources :sub_types

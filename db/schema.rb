@@ -11,13 +11,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130911073136) do
+ActiveRecord::Schema.define(version: 20130911094052) do
+
+  create_table "itineraries", force: true do |t|
+    t.integer  "day"
+    t.text     "description"
+    t.integer  "tour_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "sub_types", force: true do |t|
     t.string   "name"
     t.integer  "type_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "tours", force: true do |t|
+    t.string   "name"
+    t.text     "details",          limit: 255
+    t.integer  "duration"
+    t.date     "departure"
+    t.date     "arrival"
+    t.integer  "fees"
+    t.text     "inclusion",        limit: 255
+    t.text     "exclusion",        limit: 255
+    t.integer  "sub_type_id"
+    t.integer  "max_participants"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "destination"
   end
 
   create_table "types", force: true do |t|

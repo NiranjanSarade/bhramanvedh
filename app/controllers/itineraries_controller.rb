@@ -15,10 +15,12 @@ class ItinerariesController < ApplicationController
   # GET /itineraries/new
   def new
     @itinerary = Itinerary.new
+    @tours = Tour.order(:name)
   end
 
   # GET /itineraries/1/edit
   def edit
+    @tours = Tour.order(:name)
   end
 
   # POST /itineraries

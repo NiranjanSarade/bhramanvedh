@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :tour_id %><br>
-    <%= f.number_field :tour_id %>
+    <%= f.collection_select(:tour_id, @tours, :id, :name, prompt: true) %>
   </div>
   <div class="actions">
     <%= f.submit %>

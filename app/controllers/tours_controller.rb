@@ -15,10 +15,12 @@ class ToursController < ApplicationController
   # GET /tours/new
   def new
     @tour = Tour.new
+    @sub_types = SubType.order(:name)
   end
 
   # GET /tours/1/edit
   def edit
+    @sub_types = SubType.order(:name)
   end
 
   # POST /tours

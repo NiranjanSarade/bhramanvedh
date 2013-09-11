@@ -4,8 +4,9 @@
   <thead>
     <tr>
       <th>Name</th>
+ 	  <th>Image</th>
       <th>Details</th>
-      <th>Days</th>
+      <th>Duration</th>
       <th>Departure</th>
       <th>Arrival</th>
       <th>Fees</th>
@@ -23,8 +24,9 @@
     <% @tours.each do |tour| %>
       <tr>
         <td><%= tour.name %></td>
+		<td><%= image_tag tour.avatar.url(:medium) %></td>
         <td><%= tour.details %></td>
-        <td><%= tour.days %></td>
+        <td><%= tour.duration %></td>
         <td><%= tour.departure %></td>
         <td><%= tour.arrival %></td>
         <td><%= tour.fees %></td>

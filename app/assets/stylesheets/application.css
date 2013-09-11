@@ -13,8 +13,3 @@
  *= require bootstrap
  */
 
-.heightCarousel img {
-  width: auto;
-  height: 300px;
-  max-height: 300px;
-}

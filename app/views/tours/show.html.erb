@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @tour.name %>
+</p>
+
+<p>
+  <strong>Details:</strong>
+  <%= @tour.details %>
+</p>
+
+<p>
+  <strong>Days:</strong>
+  <%= @tour.days %>
+</p>
+
+<p>
+  <strong>Departure:</strong>
+  <%= @tour.departure %>
+</p>
+
+<p>
+  <strong>Arrival:</strong>
+  <%= @tour.arrival %>
+</p>
+
+<p>
+  <strong>Fees:</strong>
+  <%= @tour.fees %>
+</p>
+
+<p>
+  <strong>Inclusion:</strong>
+  <%= @tour.inclusion %>
+</p>
+
+<p>
+  <strong>Exclusion:</strong>
+  <%= @tour.exclusion %>
+</p>
+
+<p>
+  <strong>Sub type:</strong>
+  <%= @tour.sub_type_id %>
+</p>
+
+<p>
+  <strong>Max participants:</strong>
+  <%= @tour.max_participants %>
+</p>
+
+<%= link_to 'Edit', edit_tour_path(@tour) %> |
+<%= link_to 'Back', tours_path %>

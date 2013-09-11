@@ -1,0 +1,57 @@
+<%= form_for(@tour) do |f| %>
+  <% if @tour.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tour.errors.count, "error") %> prohibited this tour from being saved:</h2>
+
+      <ul>
+      <% @tour.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :details %><br>
+    <%= f.text_field :details %>
+  </div>
+  <div class="field">
+    <%= f.label :days %><br>
+    <%= f.number_field :days %>
+  </div>
+  <div class="field">
+    <%= f.label :departure %><br>
+    <%= f.date_select :departure %>
+  </div>
+  <div class="field">
+    <%= f.label :arrival %><br>
+    <%= f.date_select :arrival %>
+  </div>
+  <div class="field">
+    <%= f.label :fees %><br>
+    <%= f.number_field :fees %>
+  </div>
+  <div class="field">
+    <%= f.label :inclusion %><br>
+    <%= f.text_field :inclusion %>
+  </div>
+  <div class="field">
+    <%= f.label :exclusion %><br>
+    <%= f.text_field :exclusion %>
+  </div>
+  <div class="field">
+    <%= f.label :sub_type_id %><br>
+    <%= f.number_field :sub_type_id %>
+  </div>
+  <div class="field">
+    <%= f.label :max_participants %><br>
+    <%= f.number_field :max_participants %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

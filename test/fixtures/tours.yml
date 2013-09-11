@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  details: MyString
+  days: 1
+  departure: 2013-09-11
+  arrival: 2013-09-11
+  fees: 1
+  inclusion: MyString
+  exclusion: MyString
+  sub_type_id: 1
+  max_participants: 1
+
+two:
+  name: MyString
+  details: MyString
+  days: 1
+  departure: 2013-09-11
+  arrival: 2013-09-11
+  fees: 1
+  inclusion: MyString
+  exclusion: MyString
+  sub_type_id: 1
+  max_participants: 1

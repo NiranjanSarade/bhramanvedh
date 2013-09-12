@@ -10,6 +10,7 @@ class ToursController < ApplicationController
   # GET /tours/1
   # GET /tours/1.json
   def show
+    @itineraries = @tour.itineraries.sort {|it1,it2| it1.day <=> it2.day}
   end
 
   # GET /tours/new
@@ -20,12 +21,13 @@ class ToursController < ApplicationController
 
   # GET /tours/1/edit
   def edit
-    @sub_types = SubType.order(:name)
+    @sub_types = SubType.order(:name) 
   end
 
   # POST /tours
   # POST /tours.json
   def create
+    @sub_types = SubType.order(:name)
     @tour = Tour.new(tour_params)
 
     respond_to do |format|
@@ -71,6 +73,6 @@ class ToursController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tour_params
-      params.require(:tour).permit(:name, :details, :duration, :departure, :arrival, :fees, :inclusion, :exclusion, :sub_type_id, :max_participants, :avatar)
+      params.require(:tour).permit(:name, :destination, :details, :duration, :departure, :arrival, :fees, :inclusion, :exclusion, :sub_type_id, :max_participants, :avatar)
     end
 end

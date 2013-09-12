@@ -16,12 +16,16 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
+    <%= f.label :destination %><br>
+    <%= f.text_field :destination %>
+  </div>
+  <div class="field">
 	<%= f.label "Upload File"%>
 	<%= f.file_field :avatar %>
   </div>	
   <div class="field">
     <%= f.label :details %><br>
-    <%= f.text_field :details %>
+    <%= f.text_area :details %>
   </div>
   <div class="field">
     <%= f.label :duration %><br>
@@ -41,11 +45,11 @@
   </div>
   <div class="field">
     <%= f.label :inclusion %><br>
-    <%= f.text_field :inclusion %>
+    <%= f.text_area :inclusion %>
   </div>
   <div class="field">
     <%= f.label :exclusion %><br>
-    <%= f.text_field :exclusion %>
+    <%= f.text_area :exclusion %>
   </div>
   <div class="field">
     <%= f.label :sub_type_id %><br>

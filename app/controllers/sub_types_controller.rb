@@ -26,6 +26,7 @@ class SubTypesController < ApplicationController
   # POST /sub_types
   # POST /sub_types.json
   def create
+    @types = Type.order(:name)
     @sub_type = SubType.new(sub_type_params)
 
     respond_to do |format|

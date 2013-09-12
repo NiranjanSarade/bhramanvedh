@@ -1,59 +1,66 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @tour.name %>
-</p>
-
-<p>
- <strong>Image:</strong>
- <%= image_tag @tour.avatar.url(:medium) %>
-</p>
-
-<p>
-  <strong>Details:</strong>
-  <%= @tour.details %>
-</p>
-
-<p>
-  <strong>Duration:</strong>
-  <%= @tour.duration %>
-</p>
-
-<p>
-  <strong>Departure:</strong>
-  <%= @tour.departure %>
-</p>
-
-<p>
-  <strong>Arrival:</strong>
-  <%= @tour.arrival %>
-</p>
-
-<p>
-  <strong>Fees:</strong>
-  <%= @tour.fees %>
-</p>
-
-<p>
-  <strong>Inclusion:</strong>
-  <%= @tour.inclusion %>
-</p>
-
-<p>
-  <strong>Exclusion:</strong>
-  <%= @tour.exclusion %>
-</p>
-
-<p>
-  <strong>Sub type:</strong>
-  <%= @tour.sub_type_id %>
-</p>
-
-<p>
-  <strong>Max participants:</strong>
-  <%= @tour.max_participants %>
-</p>
-
+<div class="row">
+  <div class="span6">
+    <p>		 
+	  <%= image_tag @tour.avatar.url(:medium), :width => "460px" %>
+	</p>
+  </div>
+  <div class="span6">
+	  <h2><%= @tour.name%></h2>
+	  <strong>Category :</strong>
+	  <%= "#{@tour.sub_type.type.name} -> #{@tour.sub_type.name}" %><br></br>
+	  <strong>Destination :</strong>
+	  <%= @tour.destination %><br></br>
+	  <strong>Duration :</strong>
+	  <%= @tour.duration %> Days<br></br>
+	  <strong>Departure :</strong>
+	  <%= @tour.departure.strftime("%d-%B-%Y") %><br></br>
+	  <strong>Arrival :</strong>
+	  <%= @tour.arrival.strftime("%d-%B-%Y") %><br></br>
+	  <strong>Tour Cost :</strong>
+	  <%= "\u20B9 #{@tour.fees}" %><br></br>
+	  <strong>Max. number of participants :</strong>
+	  <%= @tour.max_participants %>
+  </div>	 	
+</div>
+<div class="row">
+  <div class="span12 highlight">
+    <%= @tour.details %>
+  </div>
+</div>
+<div class="row">
+	<div class="span1 highlight">
+		<strong>Inclusion</strong>
+	</div>
+	<div class="span11">
+		<%= @tour.inclusion %>
+	</div>	
+</div>
+<div class="row">
+	<div class="span1 highlight">
+		<strong>Exclusion</strong>
+	</div>
+	<div class="span11">
+		<%= @tour.exclusion %>
+	</div>	
+</div>	
+<table class "table-striped">
+  <caption class="text-left"><strong>Itinerary :</strong></caption>
+  <thead>
+    <tr>
+      <th>Day</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+	<% @itineraries.each do |itinerary| %> 
+     <tr>
+       <td><%=itinerary.day%></td>
+       <td><%=itinerary.description%></td>
+     </tr>
+   <% end %>
+  </tbody>
+</table>
 <%= link_to 'Edit', edit_tour_path(@tour) %> |
 <%= link_to 'Back', tours_path %>

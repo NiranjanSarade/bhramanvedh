@@ -1,4 +1,6 @@
 Bhramanvedh::Application.routes.draw do
+  resources :guests
+
   resources :itineraries
 
   resources :tours
